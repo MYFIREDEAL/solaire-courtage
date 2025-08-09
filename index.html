@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solaire Courtage - Réseau d'énergie solaire locale</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-gradient{ background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%); }
+    .card { transition: all .25s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <!-- petit éclair -->
+            <svg class="h-8 w-8 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span class="ml-2 text-xl font-semibold text-gray-900">Solaire Courtage</span>
+          </div>
+        </div>
+        <div class="hidden sm:ml-6 sm:flex sm:items-center">
+          <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-green-600">Accueil</a>
+          <a href="#producteurs" class="px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-green-600">Producteurs</a>
+          <a href="#consommateurs" class="px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-green-600">Consommateurs</a>
+          <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-500 hover:text-green-600">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="accueil">
+    <div class="hero-gradient">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 grid items-center gap-8 lg:grid-cols-2">
+        <div class="order-2 lg:order-1">
+          <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <span class="block">Rejoignez le réseau</span>
+            <span class="block text-green-600">d'énergie solaire locale</span>
+          </h1>
+          <p class="mt-3 max-w-md text-lg text-gray-600 sm:text-xl md:mt-5 md:max-w-3xl">Connectez directement producteurs et consommateurs pour une énergie solaire locale et mieux rémunérée.</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#producteurs" class="w-full sm:w-auto flex items-center justify-center px-8 py-3 rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10">Je produis de l'électricité</a>
+            <a href="#consommateurs" class="w-full sm:w-auto flex items-center justify-center px-8 py-3 rounded-md text-green-700 bg-green-100 hover:bg-green-200 md:py-4 md:text-lg md:px-10">Je consomme de l'électricité</a>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 mt-6 lg:mt-0">
+          <picture>
+  <img class="w-full rounded-lg shadow-xl object-cover max-h-[420px] sm:max-h-[520px] lg:object-contain lg:max-h-none" alt="Bâtiment solaire au coucher du soleil" src="https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/470218195_1193773135642975_833161536338251866_n.png?stp=cp6_dst-png&_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=3xBYkrFeAccQ7kNvwFoMhts&_nc_oc=AdlwYxf_ZN9wvSOCyYKTdIqCWj9gu8iOvVhQlrXUD7ZNyyQgd_0pDv8RnVYRdUs7f8UOdZYycQc-FcQWNLl-QDQt&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=muguUU-Wwi5e91JVgz_Puw&oh=00_AfX9-t4ox2rzIb-oKoeYCUJTnfEQwzjrJ1aqga4QAdIgBQ&oe=689CDAF4" loading="lazy" decoding="async" sizes="(max-width: 1024px) 100vw, 50vw" />
+</picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consommateurs: Intro + Simulateur -->
+  <section id="consommateurs" class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Intro Consommateur -->
+      <div class="bg-white rounded-2xl shadow-xl ring-1 ring-black/5 overflow-hidden">
+        <div class="px-6 py-6 bg-gradient-to-r from-blue-50 to-indigo-100 border-b border-blue-100">
+          <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">POUR LES CONSOMMATEURS</h3>
+          <p class="mt-4 text-base md:text-lg text-gray-700">Payez votre électricité jusqu'à 25% moins cher grâce à l'autoconsommation collective.</p>
+          <p class="mt-2 text-sm md:text-base text-gray-600">Profitez d'une énergie locale, verte et économique tout en soutenant la production solaire près de chez vous.</p>
+        </div>
+        <div class="p-6 grid gap-6 md:grid-cols-3">
+          <div class="flex items-start gap-3">
+            <div class="shrink-0 text-emerald-600 text-xl" aria-hidden="true">💶</div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800">Des économies garanties</h4>
+              <p class="mt-1 text-sm text-gray-600">Réduisez immédiatement votre facture d'électricité avec un prix du kWh négocié en direct auprès des producteurs locaux.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="shrink-0 text-emerald-600 text-xl" aria-hidden="true">⚡</div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800">Zéro changement technique</h4>
+              <p class="mt-1 text-sm text-gray-600">Aucune modification de votre installation électrique actuelle, tout passe par notre réseau sécurisé.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="shrink-0 text-emerald-600 text-xl" aria-hidden="true">🔒</div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800">Engagement flexible</h4>
+              <p class="mt-1 text-sm text-gray-600">Contrat souple et résiliable, avec un suivi clair de vos économies grâce à notre simulateur dédié.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carte + Simulateur Consommateur -->
+      <div class="mt-10 bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="p-6 sm:p-10 grid gap-6 sm:gap-8 lg:grid-cols-2">
+          <div>
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Comment ça marche ?</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start"><svg class="h-5 w-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><p class="ml-3 text-base text-gray-700">Pas d'abonnement ni de changement de fournisseur</p></li>
+              <li class="flex items-start"><svg class="h-5 w-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><p class="ml-3 text-base text-gray-700">Vous payez uniquement la (TURPE)</p></li>
+              <li class="flex items-start"><svg class="h-5 w-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><p class="ml-3 text-base text-gray-700">Contrat clair avec prix fixe sur 5 ans</p></li>
+              <li class="flex items-start"><svg class="h-5 w-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><p class="ml-3 text-base text-gray-700">Jusqu'à 30% d'économies sur votre facture</p></li>
+            </ul>
+          </div>
+
+          <!-- Simulateur Consommateur -->
+          <div class="bg-gray-50 rounded-lg p-6 overflow-hidden">
+            <h3 class="text-lg font-medium text-gray-900 mb-4">Simulez vos économies</h3>
+            <form id="consumerForm" class="space-y-4">
+              <div>
+                <label for="bill-amount" class="block text-sm font-medium text-gray-700">Facture annuelle HT (€)</label>
+                <input type="number" step="0.01" id="bill-amount" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500" />
+              </div>
+              <div>
+                <label for="annual-consumption" class="block text-sm font-medium text-gray-700">Consommation annuelle (kWh)</label>
+                <input type="number" id="annual-consumption" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500" />
+              </div>
+              <button type="submit" class="w-full flex justify-center py-2 px-4 rounded-md text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none">Calculer mes économies</button>
+            </form>
+
+            <div id="consumerResult" class="hidden mt-4 space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="rounded-xl border border-gray-200 p-4">
+                  <p class="text-xs font-semibold tracking-wide text-gray-500 uppercase">Votre prix actuel</p>
+                  <p id="currentPriceText" class="mt-1 text-2xl font-semibold tracking-tight text-gray-900">—</p>
+                </div>
+                <div class="rounded-xl border border-emerald-200 p-4 bg-emerald-50">
+                  <p class="text-xs font-semibold tracking-wide text-emerald-700 uppercase">Avec Solaire Courtage</p>
+                  <p class="mt-1 text-2xl font-semibold tracking-tight text-emerald-700">0,19 € / kWh</p>
+                </div>
+              </div>
+              <div class="rounded-2xl bg-emerald-600 text-white p-5 shadow sm:p-6">
+                <p class="text-sm/6 opacity-90">Économie potentielle / an</p>
+                <p id="consumerSavings" class="mt-1 text-3xl md:text-4xl font-extrabold">—</p>
+              </div>
+              <div id="consumerCta" class="hidden">
+                <a href="#formulaire-inscription" class="block text-center bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow">Je veux profiter de ce tarif</a>
+              </div>
+            </div>
+
+            <!-- État vide -->
+            <div id="consumerEmpty" class="mt-4 flex items-center justify-center text-gray-500">
+              <p class="text-sm">Saisissez vos données puis cliquez sur <span class="font-medium text-gray-700">Calculer mes économies</span>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Ancre Producteurs pour le menu -->
+      <div id="producteurs"></div>
+      <!-- Intro + Simulateur Producteur -->
+      <div class="mt-16 bg-white rounded-2xl shadow-xl ring-1 ring-black/5 overflow-hidden">
+        <div class="px-6 py-6 bg-gradient-to-r from-green-50 to-emerald-100 border-b border-green-100">
+          <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">POUR LES PRODUCTEURS</h3>
+          <p class="mt-4 text-base md:text-lg text-gray-700">Vous vendez à EDF à 8 cts ? Nous payons jusqu'à 12 cts.</p>
+          <p class="mt-2 text-sm md:text-base text-gray-600">Valorisez mieux votre production solaire grâce à l'autoconsommation collective.</p>
+        </div>
+        <div class="p-6 grid gap-6 md:grid-cols-3">
+          <div class="flex items-start gap-3">
+            <div class="shrink-0 text-emerald-600 text-xl" aria-hidden="true">💰</div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800">Meilleure rémunération</h4>
+              <p class="mt-1 text-sm text-gray-600">Jusqu'à 50% de revenus supplémentaires par rapport au tarif d'obligation d'achat sans avoir besoin de rompre le contrat avec EDF OA.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="shrink-0 text-emerald-600 text-xl" aria-hidden="true">⚡</div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800">Zéro contrainte</h4>
+              <p class="mt-1 text-sm text-gray-600">Pas de changement d'installation, pas de nouvelle paperasse. Nous gérons tout.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="shrink-0 text-emerald-600 text-xl" aria-hidden="true">🔒</div>
+            <div>
+              <h4 class="text-lg font-semibold text-gray-800">Contrat sécurisé</h4>
+              <p class="mt-1 text-sm text-gray-600">Engagement de 5 ans avec prix garanti. Surplus non revendu automatiquement injecté vers EDF OA selon votre contrat.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-6 py-6 sm:py-7 bg-gradient-to-r from-amber-50 to-yellow-100 border-t border-yellow-100">
+          <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">Simulateur Producteur</h3>
+          <p class="mt-1 text-sm md:text-base text-gray-600">Entrez votre <strong>production annuelle</strong> et votre <strong>tarif EDF OA (c€/kWh)</strong>. On calcule le <em>gain additionnel</em> et votre <em>revenu total</em> avec Solaire Courtage.</p>
+        </div>
+        <div class="p-6 grid gap-8 lg:grid-cols-2">
+          <form id="producerForm" class="space-y-5 bg-white rounded-xl shadow-lg p-6 ring-1 ring-emerald-200 lg:sticky lg:top-6">
+            <div>
+              <label for="productionKwh" class="block text-sm font-medium text-gray-700">Production annuelle (kWh)</label>
+              <input id="productionKwh" type="number" placeholder="Ex : 120000" class="mt-1 w-full rounded-lg border-emerald-200 ring-1 ring-emerald-100 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 p-3 bg-white" required />
+            </div>
+            <div>
+              <label for="oaTariffCts" class="block text-sm font-medium text-gray-700">Tarif EDF OA (c€/kWh)</label>
+              <input id="oaTariffCts" type="number" step="0.01" placeholder="Ex : 9.50" class="mt-1 w-full rounded-lg border-emerald-200 ring-1 ring-emerald-100 shadow-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 p-3 bg-white" required />
+            </div>
+            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-4 rounded-lg shadow">Calculer</button>
+          </form>
+          <div class="space-y-4 lg:pl-2">
+            <div id="producerResult" class="hidden space-y-4"></div>
+            <div id="producerEmpty" class="flex h-full items-center justify-center text-center text-gray-500">
+              <p class="text-sm">Renseignez vos données puis cliquez sur <span class="font-medium text-gray-700">Calculer</span>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pourquoi ce prix -->
+      <div class="mt-16 max-w-3xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="p-6 sm:p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Comment proposons-nous ce prix ?</h3>
+            <p class="text-gray-600 mb-6">Grâce à l'autoconsommation collective, nous connectons directement votre consommation avec des producteurs solaires locaux, sans intermédiaires coûteux.</p>
+            <div class="bg-green-50 rounded-lg p-4 border border-green-100">
+              <div class="flex">
+                <svg class="h-5 w-5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+                <p class="ml-3 text-sm text-green-700">Nous couvrons votre consommation de jour avec des producteurs proches de chez vous, sans changer de fournisseur. La nuit ou quand le soleil ne suffit pas, votre fournisseur habituel prend le relais.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <div class="bg-green-700">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl"><span class="block">Prêt à rejoindre la communauté</span><span class="block text-green-200">des énergies renouvelables locales ?</span></h2>
+      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+        <div class="inline-flex rounded-md shadow"><a href="#producteurs" class="inline-flex items-center justify-center px-5 py-3 rounded-md text-green-600 bg-white hover:bg-green-50">Je produis</a></div>
+        <div class="ml-3 inline-flex rounded-md shadow"><a href="#consommateurs" class="inline-flex items-center justify-center px-5 py-3 rounded-md text-white bg-green-600 hover:bg-green-700">Je consomme</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ancre inscription -->
+  <div id="formulaire-inscription"></div>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-800">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div>
+          <h3 class="text-xl font-bold text-white">Solaire Courtage</h3>
+          <p class="mt-4 text-gray-300">La solution pour une énergie solaire locale et mieux rémunérée.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Producteurs</h3>
+              <ul class="mt-4 space-y-2">
+                <li><a href="#producteurs" class="text-base text-gray-400 hover:text-white">Comment ça marche</a></li>
+                <li><a href="#producteurs" class="text-base text-gray-400 hover:text-white">Tarifs</a></li>
+                <li><a href="#producteurs" class="text-base text-gray-400 hover:text-white">FAQ</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Consommateurs</h3>
+              <ul class="mt-4 space-y-2">
+                <li><a href="#consommateurs" class="text-base text-gray-400 hover:text-white">Avantages</a></li>
+                <li><a href="#consommateurs" class="text-base text-gray-400 hover:text-white">Simulateur</a></li>
+                <li><a href="#consommateurs" class="text-base text-gray-400 hover:text-white">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">Contact</h3>
+            <ul class="mt-4 space-y-2">
+              <li class="text-base text-gray-400">contact@solairecourtage.fr</li>
+              <li class="text-base text-gray-400">01 23 45 67 89</li>
+              <li class="text-base text-gray-400">12 rue du Soleil, 75000 Paris</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">© 2025 Solaire Courtage. Tous droits réservés.</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // ===== Utils
+    function eur(x){ return new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:2}).format(x); }
+    function kwhPriceEUR(x){ return (x).toFixed(2).replace('.', ',') + ' € / kWh'; }
+    function kwhPriceCENTS(x){ return (x).toFixed(2).replace('.', ',') + ' c€ / kWh'; }
+
+    // ===== Simulateur Producteur
+    (function(){
+      const form = document.getElementById('producerForm');
+      if(!form) return;
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const prod = parseFloat(document.getElementById('productionKwh').value);
+        const oaCts = parseFloat(document.getElementById('oaTariffCts').value);
+        if (!Number.isFinite(prod) || !Number.isFinite(oaCts) || prod <= 0 || oaCts < 0) return;
+        const oaEUR = oaCts / 100; // €/kWh (champ en c€)
+        const scEUR = 0.12;        // €/kWh (12 c€)
+
+        // Δ revenu (peut être négatif si OA > SC)
+        const gainDelta = (scEUR - oaEUR) * prod; 
+        const totalWithSC = scEUR * prod;                 // revenu total avec nous
+        const totalWithOA = oaEUR * prod;                 // revenu total avec EDF OA
+        const isPositive = gainDelta >= 0;
+
+        const html = `
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="rounded-xl border p-4">
+              <p class="text-xs font-semibold text-gray-500 uppercase">Votre prix actuel</p>
+              <p class="mt-1 text-2xl font-semibold">${kwhPriceCENTS(oaCts)}</p>
+            </div>
+            <div class="rounded-xl border ${isPositive ? 'border-yellow-300 bg-yellow-50' : 'border-rose-300 bg-rose-50'} p-4">
+              <p class="text-xs font-semibold ${isPositive ? 'text-yellow-700' : 'text-rose-700'} uppercase">Avec Solaire Courtage</p>
+              <p class="mt-1 text-2xl font-semibold ${isPositive ? 'text-yellow-700' : 'text-rose-700'}">${kwhPriceCENTS(scEUR*100)}</p>
+            </div>
+          </div>
+          <div class="rounded-2xl ${isPositive ? 'bg-gradient-to-r from-yellow-500 to-amber-500' : 'bg-gradient-to-r from-rose-500 to-red-500'} text-white p-6 shadow-lg">
+            <p class="text-sm opacity-90">${isPositive ? 'Gain supplémentaire / an' : 'Écart négatif / an (SC < OA)'} </p>
+            <p class="mt-1 text-4xl font-extrabold">${eur(gainDelta)}</p>
+            <p class="mt-2 text-sm opacity-90">Revenu total avec Solaire Courtage : <strong>${eur(totalWithSC)}</strong> / an</p>
+            <p class="mt-1 text-sm opacity-90">Revenu total avec EDF OA : <strong>${eur(totalWithOA)}</strong> / an</p>
+          </div>`;
+        const res = document.getElementById('producerResult');
+        const empty = document.getElementById('producerEmpty');
+        if(res){ res.innerHTML = html; res.classList.remove('hidden'); }
+        if(empty){ empty.classList.add('hidden'); }
+      });
+    })();
+
+    // ===== Simulateur Consommateur (fenêtre 9h–19h)
+    (function(){
+      const form = document.getElementById('consumerForm');
+      if(!form) return;
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const bill = parseFloat(document.getElementById('bill-amount').value);
+        const cons = parseFloat(document.getElementById('annual-consumption').value);
+        if (!Number.isFinite(bill) || !Number.isFinite(cons) || cons <= 0 || bill < 0) return;
+        const currentPrice = bill / cons; // €/kWh
+        const scPrice = 0.19;            // €/kWh
+        const share = 10/24;             // 9h–19h
+        const coveredKWh = cons * share;
+        const savings = Math.max(0, (currentPrice - scPrice) * coveredKWh);
+        const priceEl = document.getElementById('currentPriceText');
+        const saveEl = document.getElementById('consumerSavings');
+        if(priceEl) priceEl.textContent = kwhPriceEUR(currentPrice);
+        if(saveEl) saveEl.textContent = eur(savings);
+        const res = document.getElementById('consumerResult');
+        const empty = document.getElementById('consumerEmpty');
+        const cta = document.getElementById('consumerCta');
+        if(empty) empty.classList.add('hidden');
+        if(res) res.classList.remove('hidden');
+        if(cta) cta.classList.remove('hidden');
+      });
+    })();
+  </script>
+</body>
+</html>
